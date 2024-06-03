@@ -80,9 +80,9 @@ unset LD_RUN_PATH
 #./configure \
 #    --prefix=/uny/pkg/"$pkgname"/"$pkgver"
 
-make -j"$(nproc)" PREFIX=/uny/pkg/"$pkgname"/"$pkgver"
+make -j"$(nproc)" LIBRARY_REL="lib" PREFIX=/uny/pkg/"$pkgname"/"$pkgver"
 
-make -j"$(nproc)" install PREFIX=/uny/pkg/"$pkgname"/"$pkgver"
+make -j"$(nproc)" LIBRARY_REL="lib" PREFIX=/uny/pkg/"$pkgname"/"$pkgver" install 
 
 ####################################################
 ### End of individual build script
